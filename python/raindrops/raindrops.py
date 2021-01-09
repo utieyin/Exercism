@@ -1,11 +1,4 @@
 def convert(number):
-    result = ""
-    if number % 3 == 0:
-        result += "Pling"
-    if number % 5 == 0:
-        result += "Plang"
-    if number % 7 == 0:
-        result += "Plong"
-    if not result:
-        result = str(number)
-    return result
+    drops = {3:"Pling", 5:"Plang", 7:"Plong"}
+    result ="".join([drops[x] for x in range(1,8) if x in drops and (number%x==0)])
+    return(result if result else str(number))
