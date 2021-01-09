@@ -7,9 +7,8 @@ class Matrix:
         self.result =result
 
     def row(self, index):
-        pos=index-1
-        if self.result[pos]:
-            return self.result[pos]
+        if self.result[index-1]:
+            return self.result[index-1]
         else:
             raise Exception("Key not present in dict")
 
