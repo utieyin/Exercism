@@ -21,8 +21,4 @@ class Clock:
     def __sub__(self, minutes):
         return Clock(self.hour, self.minute - minutes)
 
-
-# print(Clock(201, 3001))
-# Clock(10, 0) + 3
-# Clock(10, 0) - 3
-# Clock(3, 11), Clock(99, 11)
+print(Clock(-25, -160))
