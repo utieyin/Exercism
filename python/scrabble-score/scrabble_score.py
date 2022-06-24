@@ -12,12 +12,14 @@ def score(word):
     if len(word)==0:
         return a
     else:
-        word_list =[x.upper() for x in word]
+        word=word.upper()
+        print(word)
+        word_list =[x for x in word]
+
         for i in scores:
             for g in word_list:
                 if g in scores[i]:
                     a+=i
-
     return a
 
-score("f")
+score("cabbage")

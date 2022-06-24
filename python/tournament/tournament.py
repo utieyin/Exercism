@@ -25,15 +25,20 @@ def tally(scores):
     )
 
     for team in results:
-
         table.append(
-            "{:30s} | {:2} | {:2} | {:2} | {:2} | {:2}".format(
-                str(team),
-                results[team]["MP"],
-                results[team]["WIN"],
-                results[team]["DRAW"],
-                results[team]["LOSS"],
-                results[team]["POINTS"],
-            )
+            f'{team:30s} | {str(results[team]["MP"]):s} | {str(results[team]["WIN"]):s} | {str(results[team]["WIN"]):s} | {str(results[team]["WIN"]):s} | {str(results[team]["WIN"]):s}'
         )
+
+    print("\n".join(table))
     return table
+
+
+# results = [
+#     "Courageous Californians;Devastating Donkeys;win",
+#     "Allegoric Alaskans;Blithering Badgers;win",
+#     "Devastating Donkeys;Allegoric Alaskans;loss",
+#     "Courageous Californians;Blithering Badgers;win",
+#     "Blithering Badgers;Devastating Donkeys;draw",
+#     "Allegoric Alaskans;Courageous Californians;draw",
+# ]
+# tally(results)
